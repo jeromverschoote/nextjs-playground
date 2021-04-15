@@ -1,4 +1,4 @@
-import { colors, fonts } from 'src/styles';
+import { fonts } from 'src/styles';
 import styled from 'styled-components';
 
 const NavigationItem = `
@@ -13,12 +13,11 @@ const NavigationItem = `
 
 export const Container = {
   Root: styled.header`
-    background-color: ${colors.white.base};
-    border-top: 1px solid ${colors.opacity.lighter};
+    background-color: ${(props) => props.theme.background.primary};
+    border-top: 1px solid ${(props) => props.theme.opacity.primary};
 
     height: 1rem;
     display: flex;
-    /* align-items: flex-start; */
     justify-content: space-between;
     padding: 2rem;
 
@@ -26,7 +25,7 @@ export const Container = {
     p,
     h1 {
       ${NavigationItem}
-      color: ${colors.black.base};
+      color: ${(props) => props.theme.text.primary};
     }
   `,
   Head: styled.ul`

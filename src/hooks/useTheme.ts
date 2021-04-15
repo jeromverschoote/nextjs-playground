@@ -1,15 +1,15 @@
-import Theme from 'src/enums/Theme';
+import { themes } from 'src/styles/colors';
 
 export const useTheme = (): any => {
-  const isDark = true;
+  const isDark = false;
 
   if (isDark) {
     return {
-      theme: Theme.Dark,
+      theme: themes.dark,
     };
   }
 
   return {
-    theme: Theme.Light,
+    theme: themes.light,
   };
 };

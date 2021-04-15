@@ -1,4 +1,6 @@
-import { breakpoints, colors, fonts } from 'src/styles';
+import { breakpoints, fonts } from 'src/styles';
+import { palette } from 'src/styles/colors';
+
 import styled from 'styled-components';
 
 const NavigationItem = `
@@ -13,7 +15,7 @@ const NavigationItem = `
 
 export const Container = {
   Root: styled.header`
-    background-color: ${colors.black.base};
+    background-color: ${palette.black.base};
 
     position: fixed;
     top: 0;
@@ -36,7 +38,7 @@ export const Container = {
     p,
     h1 {
       ${NavigationItem}
-      color: ${colors.white.base};
+      color: ${palette.white.base};
     }
 
     @media (max-width: ${breakpoints.sm}) {
@@ -121,7 +123,7 @@ export const Container = {
     }
   `,
   Menu: styled.div`
-    background-color: ${colors.black.base};
+    background-color: ${(props) => props.theme.background.primary};
 
     position: fixed;
     top: 0;
@@ -136,7 +138,7 @@ export const Container = {
     flex-direction: row;
 
     font-weight: ${fonts.weight.bold};
-    color: ${colors.white.base};
+    color: ${(props) => props.theme.text.primary};
 
     padding: 0 2rem;
 

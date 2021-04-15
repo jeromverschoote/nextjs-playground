@@ -1,4 +1,4 @@
-import { fonts, colors } from 'src/styles';
+import { fonts } from 'src/styles';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -8,7 +8,7 @@ export const Container = styled.div`
   cursor: pointer;
 
   &:hover {
-    color: ${colors.link.base};
+    color: ${(props) => props.theme.info.primary};
   }
 `;
 

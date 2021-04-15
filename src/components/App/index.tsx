@@ -7,7 +7,7 @@ import nlBE from 'src/translations/nl-NL/index.json';
 import { useAuth } from 'src/hooks/useAuth';
 import { useTheme } from 'src/hooks/useTheme';
 import AuthContext from 'src/context/Auth';
-import ThemeContext from 'src/context/Theme';
+import { ThemeProvider } from 'styled-components';
 
 const queryClient = new QueryClient();
 
@@ -35,14 +35,12 @@ const App = (props: Props): JSX.Element => {
   const { user, handleLogin, handleLogout } = useAuth();
   const { theme } = useTheme();
 
-  console.log(theme);
-
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
-        <ThemeContext.Provider value={{ theme }}>
+        <ThemeProvider theme={theme}>
           <Component {...pageProps} />
-        </ThemeContext.Provider>
+        </ThemeProvider>
       </AuthContext.Provider>
     </QueryClientProvider>
   );
