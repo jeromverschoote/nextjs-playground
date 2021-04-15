@@ -42,7 +42,7 @@ const DATA = [
     date: '',
     author: {
       id: 4,
-      name: 'Wannes Demeyer',
+      name: 'Wannes De Meyer',
     },
   },
   {

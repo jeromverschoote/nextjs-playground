@@ -5,9 +5,9 @@ export const palette = {
     darkest: '#F3F4F6',
   },
   black: {
-    lightest: '#222222',
-    lighter: '#111111',
-    base: '#000000',
+    lightest: '#06090e',
+    lighter: '#0e1117',
+    base: '#161b21',
   },
   danger: {
     lightest: '#FFE8E6',
@@ -47,7 +47,7 @@ export const palette = {
   opacity: {
     lightest: '#FFFFFF80',
     lighter: '#FFFFFF50',
-    light: '#FFFFFF20',
+    light: '#FFFFFF10',
     dark: '#00000010',
     darker: '#00000050',
     darkest: '#00000080',
