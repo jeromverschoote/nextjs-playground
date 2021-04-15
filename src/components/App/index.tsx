@@ -32,12 +32,14 @@ interface Props {
 const App = (props: Props): JSX.Element => {
   const { Component, pageProps } = props;
 
-  const { user, handleLogin, handleLogout } = useAuth();
+  const { user, isLoggedIn, handleLogin, handleLogout } = useAuth();
   const { theme } = useTheme();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
+      <AuthContext.Provider
+        value={{ user, isLoggedIn, handleLogin, handleLogout }}
+      >
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>

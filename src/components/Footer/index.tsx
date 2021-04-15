@@ -22,21 +22,31 @@ const Head = (props: Props): JSX.Element => {
         {navigation.map((item: any, index: number) => {
           if (item.isShownWhenLoggedIn && isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' ? item.to : null}
+              >
+                <Link href={typeof item.to === 'string' ? item.to : null}>
+                  {item.label}
+                </Link>
               </li>
             );
           }
 
           if (item.isShownWhenLoggedOut && !isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' && item.to}
+              >
+                <Link href={typeof item.to === 'string' && item.to}>
+                  {item.label}
+                </Link>
               </li>
             );
           }
 
-          return <li key={index}></li>;
+          return <React.Fragment key={index} />;
         })}
       </Container.Head>
     );
@@ -58,21 +68,36 @@ const Body = (props: Props): JSX.Element => {
         {navigation.map((item: any, index: number) => {
           if (item.isShownWhenLoggedIn && isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' ? item.to : null}
+              >
+                <li
+                  key={index}
+                  onClick={typeof item.to === 'function' && item.to}
+                >
+                  <Link href={typeof item.to === 'string' && item.to}>
+                    {item.label}
+                  </Link>
+                </li>
               </li>
             );
           }
 
           if (item.isShownWhenLoggedOut && !isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' && item.to}
+              >
+                <Link href={typeof item.to === 'string' && item.to}>
+                  {item.label}
+                </Link>
               </li>
             );
           }
 
-          return <li key={index}></li>;
+          return <React.Fragment key={index} />;
         })}
       </Container.Body>
     );
@@ -94,21 +119,31 @@ const Foot = (props: Props): JSX.Element => {
         {navigation.map((item: any, index: number) => {
           if (item.isShownWhenLoggedIn && isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' ? item.to : null}
+              >
+                <Link href={typeof item.to === 'string' ? item.to : null}>
+                  {item.label}
+                </Link>
               </li>
             );
           }
 
           if (item.isShownWhenLoggedOut && !isLoggedIn) {
             return (
-              <li key={index}>
-                <Link href={item.to}>{item.label}</Link>
+              <li
+                key={index}
+                onClick={typeof item.to === 'function' && item.to}
+              >
+                <Link href={typeof item.to === 'string' && item.to}>
+                  {item.label}
+                </Link>
               </li>
             );
           }
 
-          return <li key={index}></li>;
+          return <React.Fragment key={index} />;
         })}
       </Container.Foot>
     );

@@ -1,18 +1,21 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 import { meta } from 'src/config';
+import AuthContext from 'src/context/Auth';
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import { externals } from 'src/config';
 
 import { Container, Content } from './styles';
 
-import Header from 'src/components/Header';
-import { useTranslation } from 'react-i18next';
-
-import Footer from 'src/components/Footer';
-
-import { externals } from 'src/config';
-
+const USER = {
+  firstName: 'Jerom',
+  lastName: 'Verschoote',
+  emailAddress: 'jeromverschoote@gmail.com',
+};
 interface Props {
   children: any;
 }
@@ -21,8 +24,8 @@ const Layout = (props: Props): JSX.Element => {
   const { children } = props;
 
   const { t } = useTranslation();
+  const { isLoggedIn, handleLogin, handleLogout } = useContext(AuthContext);
 
-  const [isLoggedIn] = useState(true);
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const navigation = {
@@ -43,7 +46,7 @@ const Layout = (props: Props): JSX.Element => {
     foot: [
       {
         label: t('components.header.labels.login'),
-        to: '/login',
+        to: () => handleLogin(USER),
         isShownWhenLoggedIn: false,
         isShownWhenLoggedOut: true,
       },
@@ -55,7 +58,7 @@ const Layout = (props: Props): JSX.Element => {
       },
       {
         label: t('components.header.labels.logout'),
-        to: '/login',
+        to: () => handleLogout(),
         isShownWhenLoggedIn: true,
         isShownWhenLoggedOut: false,
       },
