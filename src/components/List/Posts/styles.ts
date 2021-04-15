@@ -7,7 +7,6 @@ const container = `
   align-items: flex-start;
   justify-content: flex-start;
   border-radius: 0.4rem;
-  margin-top: 2rem;
   border: 1px solid ${colors.opacity.light};
 
   overflow: hidden;
@@ -44,4 +43,8 @@ export const Subtitle = styled.p`
   text-align: left;
 
   width: 100%;
+`;
+
+export const Content = styled.div`
+  padding: 2rem;
 `;

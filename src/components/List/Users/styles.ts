@@ -7,8 +7,9 @@ const container = `
   align-items: flex-start;
   justify-content: flex-start;
   border-radius: 0.4rem;
-  margin-top: 2rem;
   border: 1px solid ${colors.opacity.light};
+
+  margin-bottom: 1rem;
 
   overflow: hidden;
 `;

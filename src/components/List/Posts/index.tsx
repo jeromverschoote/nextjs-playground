@@ -4,7 +4,7 @@ import Skeleton from 'src/components/Skeleton';
 import { QueryType } from 'src/types/Query';
 
 import Item from './Item';
-import { Container, Subtitle, Title } from './styles';
+import { Container, Subtitle, Title, Content } from './styles';
 
 interface Props {
   title: string;
@@ -50,9 +50,11 @@ const UsersList = (props: Props): JSX.Element => {
   return (
     <Container.Success>
       <Title>{title}</Title>
-      {data.map((item: any, index: number) => (
-        <Item key={index} item={item} />
-      ))}
+      <Content>
+        {data.map((item: any, index: number) => (
+          <Item key={index} item={item} />
+        ))}
+      </Content>
     </Container.Success>
   );
 };

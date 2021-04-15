@@ -7,7 +7,10 @@ const DATA = [
     text:
       'Today I build my first Next App. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    authorId: 1,
+    author: {
+      id: 1,
+      name: 'Jerom Verschoote',
+    },
   },
   {
     id: 2,
@@ -15,7 +18,10 @@ const DATA = [
     text:
       'Today I picked my first flower. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    authorId: 2,
+    author: {
+      id: 2,
+      name: 'Lie Verschoote',
+    },
   },
   {
     id: 3,
@@ -23,7 +29,10 @@ const DATA = [
     text:
       'Today I caught my first Pokemon. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    authorId: 3,
+    author: {
+      id: 3,
+      name: 'Thomas Reynen',
+    },
   },
   {
     id: 4,
@@ -31,7 +40,10 @@ const DATA = [
     text:
       'Today I repaired my first smartphone. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    authorId: 4,
+    author: {
+      id: 4,
+      name: 'Wannes Demeyer',
+    },
   },
   {
     id: 5,
@@ -39,7 +51,10 @@ const DATA = [
     text:
       'Today I bought my first Bitcoin. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    authorId: 5,
+    author: {
+      id: 5,
+      name: 'Simon Van Haeken',
+    },
   },
 ];
 

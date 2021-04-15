@@ -27,4 +27,8 @@ export const Head = styled.div`
 export const Body = styled.div`
   flex-grow: 1;
   width: 20rem;
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 100%;
+  }
 `;
