@@ -69,17 +69,7 @@ export const Container = {
     }
 
     @media (max-width: ${breakpoints.sm}) {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-
-      margin-top: 6rem;
-      margin-bottom: 3rem;
-
-      li {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
+      display: none;
     }
   `,
   Body: styled.ul`
@@ -99,7 +89,7 @@ export const Container = {
     @media (max-width: ${breakpoints.sm}) {
       flex-direction: column;
 
-      margin-top: 2rem;
+      margin-top: 6rem;
       margin-bottom: 3rem;
 
       li {
@@ -143,7 +133,10 @@ export const Container = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
+
+    font-weight: ${fonts.weight.bold};
+    color: ${colors.white.base};
 
     padding: 0 2rem;
 

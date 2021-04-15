@@ -118,7 +118,11 @@ const Layout = (props: Props): JSX.Element => {
           <Header.Body navigation={navigation.body} isLoggedIn={isLoggedIn} />
           <Header.Foot navigation={navigation.foot} isLoggedIn={isLoggedIn} />
         </Header.Container>
-        <Header.Menu onClick={() => setIsCollapsed(!isCollapsed)} />
+        <Header.Menu onClick={() => setIsCollapsed(!isCollapsed)}>
+          <Link href="/">
+            <p>Logo</p>
+          </Link>
+        </Header.Menu>
 
         {/* Content */}
         <Content>{children}</Content>

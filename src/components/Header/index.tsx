@@ -119,10 +119,19 @@ const Foot = (props: Props): JSX.Element => {
   return <div />;
 };
 
-const Menu = ({ onClick }: { onClick: () => void }): JSX.Element => {
+const Menu = ({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: any;
+}): JSX.Element => {
   return (
-    <Container.Menu onClick={onClick}>
-      <Icon.Menu />
+    <Container.Menu>
+      {children}
+      <div onClick={onClick}>
+        <Icon.Menu />
+      </div>
     </Container.Menu>
   );
 };
