@@ -1,4 +1,4 @@
-import { breakpoints, colors, fonts } from 'src/styles';
+import { colors, fonts } from 'src/styles';
 import styled from 'styled-components';
 
 const NavigationItem = `
