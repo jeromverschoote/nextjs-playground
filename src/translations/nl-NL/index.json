@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Next Playground",
+    "description": "Next Playground — Een experimenteeromgeving om in React, Node.js, Next.js en MongoDB nieuwe technologieën uit te testen"
+  },
+  "labels": {
+    "open": "Localiseer",
+    "edit": "Wijzigen",
+    "delete": "Verwijderen",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "save": "Opslaan",
+    "add": "Aanmaken",
+    "register": "Registreren",
+    "users": "Gebruikers",
+    "posts": "Posts"
+  },
+  "views": {
+    "home": {
+      "title": "Next.js Playground"
+    },
+    "login": {
+      "title": "Aanmelden"
+    },
+    "register": {
+      "title": "Registreren"
+    },
+    "create": {
+      "title": "Aanmaken"
+    }
+  },
+  "components": {
+    "header": {
+      "labels": {
+        "profile": "Profiel",
+        "create": "Aanmaken",
+        "login": "Aanmelden",
+        "register": "Registreren",
+        "logout": "Afmelden"
+      }
+    },
+    "footer": {
+      "label": {
+        "credits": "Jerom Verschoote © 2021",
+        "terms": "Voorwaarden & Condities"
+      }
+    },
+    "list": {
+      "isError": {
+        "title": "Oeps!",
+        "subtitle": "Kon data niet ophalen. Probeer later opnieuw."
+      },
+      "isEmpty": {
+        "title": "Oeps!",
+        "subtitle": "Deze lijst is nog leeg."
+      }
+    },
+    "form": {
+      "label": {
+        "name": "Naam",
+        "title": "Titel",
+        "address": "Adres",
+        "type": "Type",
+        "price": "Prijs",
+        "email": "E-mailadres",
+        "password": "Wachtwoord",
+        "passwordRepeat": "Herhaal Wachtwoord"
+      },
+      "placeholder": {
+        "name": "John Doe",
+        "email": "john.doe@mail.com",
+        "password": "********",
+        "title": "Luxueus appartement op wandelafstand van het centrum",
+        "address": "Koning Albertlaan 101",
+        "type": "Appartment",
+        "price": "350.000"
+      },
+      "isComplete": {
+        "message": "Psst! Het ziet er naar uit dat je een veld bent vergeten."
+      },
+      "isInvalid": {
+        "message": "Oeps! Het ziet er naar uit dat je een veld incorrect hebt ingevuld."
+      },
+      "isError": {
+        "message": "Oeps! Kon niet verbinden met de server. Probeer het later opnieuw."
+      }
+    }
+  }
+}

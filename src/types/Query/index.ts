@@ -1,0 +1,22 @@
+export type QueryType = {
+  data: any | undefined;
+  dataUpdatedAt: number;
+  error: any;
+  errorUpdatedAt: number;
+  failureCount: number;
+  isError: boolean;
+  isFetched: boolean;
+  isFetchedAfterMount: boolean;
+  isFetching: boolean;
+  isIdle: boolean;
+  isLoading: boolean;
+  isLoadingError: boolean;
+  isPlaceholderData: boolean;
+  isPreviousData: boolean;
+  isRefetchError: boolean;
+  isStale: boolean;
+  isSuccess: boolean;
+  refetch: () => void;
+  remove: () => void;
+  status: string;
+};
