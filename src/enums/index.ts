@@ -1,4 +1,4 @@
-import ColorSchemeEnum from './ColorScheme';
+import ThemeEnum from './Theme';
 import InputEnum from './Input';
 
-export default { ColorSchemeEnum, InputEnum };
+export default { ThemeEnum, InputEnum };
