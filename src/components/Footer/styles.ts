@@ -39,20 +39,6 @@ export const Container = {
       margin-right: 1rem;
       list-style: none;
     }
-
-    @media (max-width: ${breakpoints.sm}) {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-
-      margin-top: 6rem;
-      margin-bottom: 3rem;
-
-      li {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-    }
   `,
   Body: styled.ul`
     display: flex;
@@ -67,18 +53,6 @@ export const Container = {
       margin-right: 1rem;
       list-style: none;
     }
-
-    @media (max-width: ${breakpoints.sm}) {
-      flex-direction: column;
-
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-
-      li {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-    }
   `,
   Foot: styled.ul`
     display: flex;
@@ -87,19 +61,6 @@ export const Container = {
     li {
       margin-left: 1rem;
       list-style: none;
-    }
-
-    @media (max-width: ${breakpoints.sm}) {
-      flex-direction: column;
-      align-items: flex-start;
-
-      margin-top: 2rem;
-      margin-bottom: 3rem;
-
-      li {
-        margin-left: 0;
-        margin-top: 1rem;
-      }
     }
   `,
 };
