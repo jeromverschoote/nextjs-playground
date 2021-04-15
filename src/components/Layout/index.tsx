@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
