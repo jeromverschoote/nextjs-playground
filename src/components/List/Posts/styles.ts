@@ -34,6 +34,7 @@ export const Title = styled.h2`
   text-align: left;
 
   border-bottom: 1px solid ${colors.opacity.lighter};
+
   width: 100%;
 `;
 

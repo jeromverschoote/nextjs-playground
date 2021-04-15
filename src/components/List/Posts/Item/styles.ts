@@ -8,11 +8,7 @@ export const Container = styled.li`
   flex-direction: column;
   align-items: flex-start;
 
-  overflow: hidden;
-
   padding: 2rem;
-
-  width: 100%;
 
   font-size: ${fonts.getSizeInRem(10)};
 `;
