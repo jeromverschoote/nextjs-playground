@@ -5,9 +5,9 @@ import { initReactI18next } from 'react-i18next';
 
 import nlBE from 'src/translations/nl-NL/index.json';
 import { useAuth } from 'src/hooks/useAuth';
-import { useColorScheme } from 'src/hooks/useColorScheme';
+import { useTheme } from 'src/hooks/useTheme';
 import AuthContext from 'src/context/Auth';
-import ColorSchemeContext from 'src/context/ColorScheme';
+import ThemeContext from 'src/context/Theme';
 
 const queryClient = new QueryClient();
 
@@ -33,14 +33,16 @@ const App = (props: Props): JSX.Element => {
   const { Component, pageProps } = props;
 
   const { user, handleLogin, handleLogout } = useAuth();
-  const { colorScheme } = useColorScheme();
+  const { theme } = useTheme();
+
+  console.log(theme);
 
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
-        <ColorSchemeContext.Provider value={{ colorScheme }}>
+        <ThemeContext.Provider value={{ theme }}>
           <Component {...pageProps} />
-        </ColorSchemeContext.Provider>
+        </ThemeContext.Provider>
       </AuthContext.Provider>
     </QueryClientProvider>
   );
