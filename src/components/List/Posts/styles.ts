@@ -50,6 +50,6 @@ export const Subtitle = styled.p`
   width: 100%;
 `;
 
-export const Content = styled.div`
+export const Content = styled.ul`
   padding: 2rem;
 `;

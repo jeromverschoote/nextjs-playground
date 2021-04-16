@@ -122,7 +122,7 @@ export const Container = {
       }
     }
   `,
-  Menu: styled.div`
+  Menu: styled.ul`
     background-color: ${(props) => props.theme.background.primary};
 
     position: fixed;

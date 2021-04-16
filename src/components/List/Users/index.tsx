@@ -50,9 +50,11 @@ const UsersList = (props: Props): JSX.Element => {
   return (
     <Container.Success>
       <Title>{title}</Title>
-      {data.map((item: any, index: number) => (
-        <Item key={index} item={item} />
-      ))}
+      <ul>
+        {data.map((item: any, index: number) => (
+          <Item key={index} item={item} />
+        ))}
+      </ul>
     </Container.Success>
   );
 };

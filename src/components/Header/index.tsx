@@ -159,9 +159,9 @@ const Menu = ({
   return (
     <Container.Menu>
       {children}
-      <div onClick={onClick}>
+      <li onClick={onClick}>
         <Icon.Menu />
-      </div>
+      </li>
     </Container.Menu>
   );
 };
