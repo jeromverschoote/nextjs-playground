@@ -28,7 +28,7 @@ const Head = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'string' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>
@@ -41,7 +41,7 @@ const Head = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'string' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>
@@ -74,7 +74,7 @@ const Body = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'function' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const Body = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'function' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>
@@ -120,7 +120,7 @@ const Foot = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'function' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>
@@ -133,7 +133,7 @@ const Foot = (props: Props): JSX.Element => {
                 key={index}
                 onClick={typeof item.to === 'function' ? item.to : null}
               >
-                <Link href={typeof item.to === 'string' ? item.to : ''}>
+                <Link href={typeof item.to === 'string' ? item.to : '/'}>
                   {item.label}
                 </Link>
               </li>

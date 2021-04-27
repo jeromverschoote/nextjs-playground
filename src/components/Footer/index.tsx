@@ -24,9 +24,9 @@ const Head = (props: Props): JSX.Element => {
             return (
               <li
                 key={index}
-                onClick={typeof item.to === 'function' ? item.to : null}
+                onClick={typeof item.to === 'function' ? item.to : ''}
               >
-                <Link href={typeof item.to === 'string' ? item.to : null}>
+                <Link href={typeof item.to === 'string' ? item.to : ''}>
                   {item.label}
                 </Link>
               </li>
