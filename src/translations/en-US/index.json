@@ -1,104 +1,88 @@
 {
   "meta": {
-    "title": "Smart Estate - Advertise and Sell",
-    "description": "With Smart Estate you can advertise and sell your real estate swiftly and safely!"
-  },
-  "header": {
-    "title": "SmartEstate",
-    "links": {
-      "users": "Users",
-      "profile": "Profile",
-      "create": "Create",
-      "auth": "Login"
-    }
-  },
-  "users": {
-    "list": {
-      "isEmpty": {
-        "title": "There are no users yet.",
-        "subtitle": "You could be the first one!"
-      }
-    }
-  },
-  "places": {
-    "list": {
-      "empty": {
-        "title": "There are no posts yet.",
-        "subtitle": "Please check back later!",
-        "isEditor": {
-          "title": "You have not yet posted any Places yet.",
-          "subtitle": "Maybe create one?"
-        }
-      }
-    }
+    "title": "Next Playground",
+    "description": "Next Playground — A sandbox for testing new technologies in React, Node.js, Next.js and MongoDB"
   },
   "labels": {
-    "open": "Locate",
-    "buy": "Buy",
+    "open": "Localize",
     "edit": "Edit",
     "delete": "Delete",
     "cancel": "Cancel",
     "close": "Close",
     "save": "Save",
-    "register": "Register",
-    "login": "Log In",
-    "logout": "Log Out",
-    "title": "Title",
-    "address": "Address",
-    "type": "Type",
-    "price": "Price",
     "add": "Create",
-    "email": "Email Address",
-    "password": "Password",
-    "passwordRepeat": "Repeat Password",
-    "name": "Name",
-    "create": "Create Estate",
-    "places": "Places",
-    "image": "Image Link",
-    "uploadImage": "Upload Image"
+    "register": "Register",
+    "users": "Users",
+    "posts": "Posts"
   },
-  "modals": {
-    "open": {
-      "title": "Locate"
+  "views": {
+    "home": {
+      "title": "Next.js Playground"
     },
-    "edit": {
-      "title": "Edit"
+    "login": {
+      "title": "Login"
     },
-    "delete": {
-      "title": "Delete",
-      "message": "You are about to delete '{{item}}'. Are you sure?"
-    }
-  },
-  "messages": {
-    "error": {
-      "form": {
-        "incomplete": "Psst! Seems like you forgot one or more fields.",
-        "incorrect": "Oops! Seems like you filled out one or more fields incorrectly."
-      },
-      "server": {
-        "down": "Oops! Couldn't connect to the server. Please try again later."
-      }
-    }
-  },
-  "placeholders": {
-    "form": {
-      "name": "John Doe",
-      "email": "john.doe@mail.com",
-      "password": "********",
-      "image": "https://images.unsplash.com/photo-1535713875002",
-      "estate": {
-        "title": "Luxury apartment at walking distance from city center",
-        "address": "Luxury Avenue 101",
-        "type": "Apartment",
-        "price": "420.000"
-      }
+    "register": {
+      "title": "Register"
+    },
+    "create": {
+      "title": "Create"
     }
   },
   "components": {
+    "header": {
+      "labels": {
+        "profile": "Profile",
+        "create": "Create",
+        "login": "Login",
+        "register": "Register",
+        "logout": "Logout"
+      }
+    },
+    "footer": {
+      "label": {
+        "credits": "Jerom Verschoote © 2021",
+        "terms": "Terms & Conditions"
+      }
+    },
     "list": {
+      "isError": {
+        "title": "Oops!",
+        "subtitle": "Could not fetch data. Try again later."
+      },
       "isEmpty": {
         "title": "Oops!",
-        "subtitle": "No results were found here."
+        "subtitle": "This list has no data yet."
+      }
+    },
+    "form": {
+      "label": {
+        "name": "Name",
+        "title": "Title",
+        "address": "Address",
+        "type": "Type",
+        "price": "Price",
+        "email": "E-mail Address",
+        "password": "Password",
+        "passwordRepeat": "Repeat Password"
+      },
+      "placeholder": {
+        "name": "John Doe",
+        "email": "john.doe@mail.com",
+        "password": "********",
+        "title": "Luxurious apartment at walking distance from the city center",
+        "address": "King Albert Avenue 101",
+        "type": "Apartment",
+        "price": "350.000"
+      },
+      "isComplete": {
+        "message": "Psst! Looks like you forgot a field."
+      },
+      "isInvalid": {
+        "message": "Oeps! Looks like you filled out a field incorrectly."
+      },
+      "isError": {
+        "message": "Oeps! Could not connect to server. Please try again later."
       }
     }
   }
