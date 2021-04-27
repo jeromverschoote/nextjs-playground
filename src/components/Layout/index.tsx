@@ -92,7 +92,7 @@ const Layout = (props: Props): JSX.Element => {
         <meta property="twitter:image" content={meta.image} />
 
         {/* Progressive Web App */}
-        {/* <link rel="manifest" href="/manifest.json" /> */}
+        <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/logo192.png" />
         <meta name="theme-color" content={meta.colors.theme} />
         <meta
