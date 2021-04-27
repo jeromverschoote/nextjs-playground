@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-  background-color: #fff;
+  background-color: ${(props: any) => props.theme.background.primary};
 
   padding: 1rem;
   margin-bottom: 1rem;

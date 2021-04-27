@@ -14,6 +14,7 @@ export const Container = {
   Loading: styled.div`
     ${container}
     border: 1px solid ${(props: any) => props.theme.opacity.primary};
+    padding: 1rem 2rem;
   `,
   Error: styled.div`
     ${container}

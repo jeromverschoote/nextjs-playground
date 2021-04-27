@@ -22,7 +22,7 @@ const UsersList = (props: Props): JSX.Element => {
   if (isLoading) {
     return (
       <Container.Loading>
-        {[0, 1].map((n) => (
+        {[0, 1, 2, 3, 4].map((n) => (
           <Skeleton.Article key={n} />
         ))}
       </Container.Loading>
