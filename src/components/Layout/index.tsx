@@ -10,6 +10,10 @@ import Footer from 'src/components/Footer';
 import { externals } from 'src/config';
 
 import { Container, Content } from './styles';
+import Icon from '../Icon';
+
+import { palette } from 'src/styles/colors';
+import { useRouter } from 'next/router';
 
 const USER = {
   firstName: 'Jerom',
@@ -25,6 +29,7 @@ const Layout = (props: Props): JSX.Element => {
 
   const { t } = useTranslation();
   const { isLoggedIn, handleLogin, handleLogout } = useContext(AuthContext);
+  const router = useRouter();
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -114,10 +119,8 @@ const Layout = (props: Props): JSX.Element => {
         {/* Header */}
         <Header.Container isCollapsed={isCollapsed}>
           <Header.Head>
-            <li>
-              <Link href="/">
-                <p>Logo</p>
-              </Link>
+            <li onClick={() => router.push('/')}>
+              <Icon.Home color={palette.white.base} />
             </li>
           </Header.Head>
           <Header.Body navigation={navigation.body} isLoggedIn={isLoggedIn} />

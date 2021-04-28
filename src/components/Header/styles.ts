@@ -68,6 +68,7 @@ export const Container = {
     li {
       margin-right: 1rem;
       list-style: none;
+      cursor: pointer;
     }
 
     @media (max-width: ${breakpoints.sm}) {
