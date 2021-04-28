@@ -127,10 +127,8 @@ const Layout = (props: Props): JSX.Element => {
           <Header.Foot navigation={navigation.foot} isLoggedIn={isLoggedIn} />
         </Header.Container>
         <Header.Menu onClick={() => setIsCollapsed(!isCollapsed)}>
-          <li>
-            <Link href="/">
-              <p>Logo</p>
-            </Link>
+          <li onClick={() => router.push('/')}>
+            <Icon.Home color={palette.white.base} />
           </li>
         </Header.Menu>
 

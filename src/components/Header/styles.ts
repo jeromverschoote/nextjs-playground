@@ -124,7 +124,7 @@ export const Container = {
     }
   `,
   Menu: styled.ul`
-    background-color: ${(props) => props.theme.background.primary};
+    background-color: ${palette.black.base};
 
     position: fixed;
     top: 0;
@@ -146,6 +146,10 @@ export const Container = {
     position: fixed;
 
     z-index: 4;
+
+    li {
+      list-style-type: none;
+    }
 
     @media (min-width: ${breakpoints.sm}) {
       display: none;
