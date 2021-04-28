@@ -7,6 +7,7 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
     runtimeCaching: runtimeCaching,
+    disable: process.env.NODE_ENV === 'production' ? false : true,
   },
   i18n: {
     // These are all the locales you want to support in
