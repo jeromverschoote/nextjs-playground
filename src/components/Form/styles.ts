@@ -27,6 +27,7 @@ export const Field = styled.div`
 `;
 
 export const Label = styled.label`
+  color: ${(props) => props.theme.text.primary};
   font-size: ${fonts.getSizeInRem(9)};
   padding: 1.5rem 0 0.75rem 0;
 `;

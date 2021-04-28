@@ -7,5 +7,6 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
+  color: ${(props) => props.theme.text.primary};
   padding: 2rem 0 1rem 0;
 `;
