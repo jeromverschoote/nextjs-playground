@@ -4,8 +4,8 @@ export default {
     'Next.js Playground — A personal sandbox for testing new technologies in React, Node.js, Next.js and MongoDB',
   domain: 'https://nextjs-playground-olive.vercel.app/',
   colors: {
-    theme: '#000',
-    status: '#000',
+    theme: '#161b21',
+    status: '#161b21',
   },
   image: '',
   app: {
