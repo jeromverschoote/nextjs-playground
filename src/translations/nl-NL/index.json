@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Next Playground",
-    "description": "Next Playground — Een experimenteeromgeving om in React, Node.js, Next.js en MongoDB nieuwe technologieën uit te testen"
+    "title": "Next.js Playground",
+    "description": "Next.js Playground — Een experimenteeromgeving om in React, Node.js, Next.js en MongoDB nieuwe technologieën uit te testen"
   },
   "labels": {
     "open": "Localiseer",

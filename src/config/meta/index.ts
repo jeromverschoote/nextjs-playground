@@ -1,8 +1,8 @@
 export default {
-  title: 'Smart Estate - Advertise and Sell',
+  title: 'Next.js Playground',
   description:
-    'With Smart Estate you can advertise and sell your real estate swiftly and safely!',
-  domain: 'https://smartestate.com/',
+    'Next.js Playground — A personal sandbox for testing new technologies in React, Node.js, Next.js and MongoDB',
+  domain: 'https://nextjs-playground-olive.vercel.app/',
   colors: {
     theme: '#000',
     status: '#000',

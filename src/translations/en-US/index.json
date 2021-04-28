@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Next Playground",
-    "description": "Next Playground — A sandbox for testing new technologies in React, Node.js, Next.js and MongoDB"
+    "title": "Next.js Playground",
+    "description": "Next.js Playground — A personal sandbox for testing new technologies in React, Node.js, Next.js and MongoDB"
   },
   "labels": {
     "open": "Localize",
