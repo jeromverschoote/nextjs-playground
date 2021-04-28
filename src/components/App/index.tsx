@@ -2,15 +2,14 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { ThemeProvider } from 'styled-components';
+import { useRouter } from 'next/router';
 
 import nlBE from 'src/translations/nl-NL/index.json';
 import enUS from 'src/translations/en-US/index.json';
-
 import { useAuth } from 'src/hooks/useAuth';
 import { useTheme } from 'src/hooks/useTheme';
 import AuthContext from 'src/context/Auth';
-import { ThemeProvider } from 'styled-components';
-import { useRouter } from 'next/router';
 
 const queryClient = new QueryClient();
 
