@@ -101,8 +101,8 @@ const Layout = (props: Props): JSX.Element => {
         <link rel="apple-touch-icon" href="/logo192.png" />
         <meta name="theme-color" content={meta.colors.theme} />
         <meta
-          name="apple-mobile-web-app-status-bar"
-          content={meta.colors.status}
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
         />
         <meta
           name="msapplication-navbutton-color"
