@@ -1,19 +1,22 @@
+import { useEffect, useState } from 'react';
 import { themes } from 'src/styles/colors';
 
 export const useTheme = (): any => {
-  const isDark = true;
+  const [theme, setTheme] = useState(themes.light);
 
-  if (isDark) {
-    // document.body.style.backgroundColor = themes.dark.background.primary;
+  useEffect(() => {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    return {
-      theme: themes.dark,
-    };
-  }
+    if (isDark) {
+      setTheme(themes.dark);
 
-  // document.body.style.backgroundColor = themes.light.background.primary;
+      // Also update body background color
+      document.body.style.backgroundColor = themes.dark.background.primary;
+    }
+  }, []);
 
   return {
-    theme: themes.light,
+    theme,
+    setTheme,
   };
 };

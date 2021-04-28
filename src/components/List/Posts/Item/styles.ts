@@ -28,7 +28,7 @@ export const Title = styled.h3`
 export const Subtitle = styled.p`
   color: ${(props) => props.theme.text.secondary};
   font-size: ${fonts.getSizeInRem(11)};
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: ${fonts.weight.thin};
   padding-bottom: 0.5rem;
 `;
