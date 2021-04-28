@@ -20,13 +20,13 @@
       "title": "Next.js Playground"
     },
     "login": {
-      "title": "Login"
+      "title": "Login an existing"
     },
     "register": {
-      "title": "Register"
+      "title": "Register a new user"
     },
     "create": {
-      "title": "Create"
+      "title": "Create a new post"
     }
   },
   "components": {
@@ -59,9 +59,7 @@
       "label": {
         "name": "Name",
         "title": "Title",
-        "address": "Address",
-        "type": "Type",
-        "price": "Price",
+        "content": "Content",
         "email": "E-mail Address",
         "password": "Password",
         "passwordRepeat": "Repeat Password"
@@ -70,10 +68,8 @@
         "name": "John Doe",
         "email": "john.doe@mail.com",
         "password": "********",
-        "title": "Luxurious apartment at walking distance from the city center",
-        "address": "King Albert Avenue 101",
-        "type": "Apartment",
-        "price": "350.000"
+        "title": "Hello Next.js!",
+        "content": "Today I build my first Next App."
       },
       "isComplete": {
         "message": "Psst! Looks like you forgot a field."

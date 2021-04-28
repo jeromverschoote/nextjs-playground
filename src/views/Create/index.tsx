@@ -21,24 +21,10 @@ const Create = (): JSX.Element => {
       isRequired: true,
     },
     {
-      key: 'address',
-      label: t('components.form.label.address'),
-      placeholder: t('components.form.placeholder.address'),
+      key: 'content',
+      label: t('components.form.label.content'),
+      placeholder: t('components.form.placeholder.content'),
       type: InputEnum.Text,
-      isRequired: true,
-    },
-    {
-      key: 'type',
-      label: t('components.form.label.type'),
-      placeholder: t('components.form.placeholder.type'),
-      type: InputEnum.Text,
-      isRequired: true,
-    },
-    {
-      key: 'price',
-      label: t('components.form.label.price'),
-      placeholder: t('components.form.placeholder.price'),
-      type: InputEnum.Number,
       isRequired: true,
     },
   ];

@@ -20,13 +20,13 @@
       "title": "Next.js Playground"
     },
     "login": {
-      "title": "Aanmelden"
+      "title": "Een bestaande gebruiker aanmelden"
     },
     "register": {
-      "title": "Registreren"
+      "title": "Een nieuwe gebruiker registeren"
     },
     "create": {
-      "title": "Aanmaken"
+      "title": "Een nieuwe post aanmaken"
     }
   },
   "components": {
@@ -59,9 +59,7 @@
       "label": {
         "name": "Naam",
         "title": "Titel",
-        "address": "Adres",
-        "type": "Type",
-        "price": "Prijs",
+        "content": "Inhoud",
         "email": "E-mailadres",
         "password": "Wachtwoord",
         "passwordRepeat": "Herhaal Wachtwoord"
@@ -70,10 +68,8 @@
         "name": "John Doe",
         "email": "john.doe@mail.com",
         "password": "********",
-        "title": "Luxueus appartement op wandelafstand van het centrum",
-        "address": "Koning Albertlaan 101",
-        "type": "Appartment",
-        "price": "350.000"
+        "title": "Hallo Next.js!",
+        "content": "Vandaag bouwde ik m'n eerste Next App."
       },
       "isComplete": {
         "message": "Psst! Het ziet er naar uit dat je een veld bent vergeten."
