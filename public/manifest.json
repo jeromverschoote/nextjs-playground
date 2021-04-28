@@ -1,6 +1,6 @@
 {
-  "short_name": "Next Playground",
-  "name": "Next Playground",
+  "short_name": "Next.js",
+  "name": "Next.js Playground",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,7 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#24292E",
+  "theme_color": "#161b21",
   "background_color": "#ffffff",
   "orientation": "portrait-primary"
 }
