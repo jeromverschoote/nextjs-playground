@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from 'src/components/Button';
 import { InputType } from 'src/types/Input';
@@ -26,17 +26,20 @@ const Form = (props: Props): JSX.Element => {
   const [values, setValues]: [any, any] = useState({});
   const [message, setMessage] = useState(requestError || '');
 
-  const handleChangeInput = (field: InputType, value: string) => {
-    const isValid = value !== '' || !field.isRequired;
+  const handleChangeInput = useCallback(
+    (field: InputType, value: string) => {
+      const isValid = value !== '' || !field.isRequired;
 
-    setValues({
-      ...values,
-      [field.key]: {
-        value,
-        isValid: isValidated ? isValid : true,
-      },
-    });
-  };
+      setValues({
+        ...values,
+        [field.key]: {
+          value,
+          isValid: isValidated ? isValid : true,
+        },
+      });
+    },
+    [isValidated, values],
+  );
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Form from 'src/components/Form';
 import Layout from 'src/components/Layout';
@@ -8,58 +8,29 @@ import { Container, Title } from './styles';
 
 const Create = (): JSX.Element => {
   const { t } = useTranslation();
-  // const { user }: { user: any } = useContext(Auth);
   const [error] = useState('');
-  // const router = useRouter();
 
-  const fields = [
-    {
-      key: 'title',
-      label: t('components.form.label.title'),
-      placeholder: t('components.form.placeholder.title'),
-      type: InputEnum.Text,
-      isRequired: true,
-    },
-    {
-      key: 'content',
-      label: t('components.form.label.content'),
-      placeholder: t('components.form.placeholder.content'),
-      type: InputEnum.Text,
-      isRequired: true,
-    },
-  ];
+  const fields = useMemo(
+    () => [
+      {
+        key: 'title',
+        label: t('components.form.label.title'),
+        placeholder: t('components.form.placeholder.title'),
+        type: InputEnum.Text,
+        isRequired: true,
+      },
+      {
+        key: 'content',
+        label: t('components.form.label.content'),
+        placeholder: t('components.form.placeholder.content'),
+        type: InputEnum.Text,
+        isRequired: true,
+      },
+    ],
+    [t],
+  );
 
-  const handleSubmitForm = () => null;
-
-  // const handleSubmitForm = async (values: Values) => {
-  //   const { title, address, type, price, image } = values;
-
-  //   // Reset error
-  //   setError('');
-
-  //   try {
-  //     const { data } = await api.post('/estate', null, {
-  //       params: {
-  //         userId: user!._id,
-  //         title,
-  //         type,
-  //         address,
-  //         image,
-  //         price,
-  //       },
-  //     });
-
-  //     if (data.error) {
-  //       return setError(data.error.message);
-  //     }
-
-  //     // Redirect to Landing
-  //     return router.push('/');
-  //   } catch {
-  //     // Throw error when couldn't connect to server
-  //     setError(t('messages.error.server.down'));
-  //   }
-  // };
+  const handleSubmitForm = useCallback(() => null, []);
 
   return (
     <Layout>

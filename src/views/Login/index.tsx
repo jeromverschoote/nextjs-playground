@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Form from 'src/components/Form';
 import Layout from 'src/components/Layout';
@@ -11,57 +11,27 @@ const Login = (): JSX.Element => {
 
   const [error] = useState('');
 
-  const fields = [
-    {
-      key: 'email',
-      label: t('components.form.label.email'),
-      placeholder: t('components.form.placeholder.email'),
-      type: InputEnum.Email,
-      isRequired: true,
-    },
-    {
-      key: 'password',
-      label: t('components.form.label.password'),
-      placeholder: t('components.form.placeholder.password'),
-      type: InputEnum.Password,
-      isRequired: true,
-    },
-  ];
+  const fields = useMemo(
+    () => [
+      {
+        key: 'email',
+        label: t('components.form.label.email'),
+        placeholder: t('components.form.placeholder.email'),
+        type: InputEnum.Email,
+        isRequired: true,
+      },
+      {
+        key: 'password',
+        label: t('components.form.label.password'),
+        placeholder: t('components.form.placeholder.password'),
+        type: InputEnum.Password,
+        isRequired: true,
+      },
+    ],
+    [t],
+  );
 
-  const handleSubmitForm = () => null;
-
-  // const handleSubmitForm = async (values: Values) => {
-  //   const { email, password } = values;
-
-  //   setError('');
-
-  //   try {
-  //     const { data } = await api.post('/login', null, {
-  //       params: {
-  //         email,
-  //         password,
-  //       },
-  //     });
-
-  //     if (data.error) {
-  //       return setError(data.error.message);
-  //     }
-
-  //     // Set token
-  //     const token = data.result.token;
-  //     localStorage.setItem('jwt', token);
-
-  //     // Login user
-  //     const user = data.result.user;
-  //     handleLogin(user);
-
-  //     // Redirect to Profile
-  //     return props.history.push(`/${user.id}`);
-  //   } catch {
-  //     // Throw error when couldn't connect to server
-  //     setError(`Oops! Couldn't connect to the server. Please try again later.`);
-  //   }
-  // };
+  const handleSubmitForm = useCallback(() => null, []);
 
   return (
     <Layout>
