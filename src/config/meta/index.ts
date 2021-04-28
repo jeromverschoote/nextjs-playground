@@ -5,7 +5,7 @@ export default {
   domain: 'https://nextjs-playground-olive.vercel.app/',
   colors: {
     theme: '#161b21',
-    status: 'black-translucent',
+    status: 'black',
   },
   image: '',
   app: {
