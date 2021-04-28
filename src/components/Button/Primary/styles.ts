@@ -19,4 +19,8 @@ export const Container = styled.button`
   cursor: pointer;
 
   width: 100%;
+
+  &:hover {
+    background-color: ${(props) => props.theme.success.secondary};
+  }
 `;
