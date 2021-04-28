@@ -9,9 +9,6 @@ export const Container = styled.form`
   border-radius: 0.4rem;
 
   margin-bottom: 1rem;
-  // Label
-
-  // Error
 
   // Button
   button {
