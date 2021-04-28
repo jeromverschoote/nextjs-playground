@@ -47,7 +47,7 @@ const Form = (props: Props): JSX.Element => {
 
       // Throw error when form is incomplete
       if (Object.keys(values).length !== fields.length) {
-        return setMessage(t('messages.error.form.incomplete'));
+        return setMessage(t('components.form.isComplete.message'));
       }
 
       // Throw error when form is incorrect
@@ -62,7 +62,7 @@ const Form = (props: Props): JSX.Element => {
       });
 
       if (errors.length > 0) {
-        return setMessage(t('messages.error.form.incorrect'));
+        return setMessage(t('components.form.isInvalid.message'));
       }
     }
 
@@ -87,7 +87,7 @@ const Form = (props: Props): JSX.Element => {
       {fields?.map((field: InputType, index: number) => {
         const { label, type, placeholder, key } = field;
 
-        // const isValid = values[field.key] && values[field.key].isValid;
+        const isValid = values[field.key] && values[field.key].isValid;
 
         return (
           <Field key={index}>
@@ -97,9 +97,13 @@ const Form = (props: Props): JSX.Element => {
               name={key}
               type={type}
               placeholder={placeholder}
-              onChange={(e) => handleChangeInput(field, e.currentTarget.value)}
-              onBlur={(e) => handleChangeInput(field, e.currentTarget.value)}
-              // isValid={isValid}
+              onChange={(e: any) =>
+                handleChangeInput(field, e.currentTarget.value)
+              }
+              onBlur={(e: any) =>
+                handleChangeInput(field, e.currentTarget.value)
+              }
+              isValid={isValid}
             />
           </Field>
         );

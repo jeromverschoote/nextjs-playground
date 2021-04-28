@@ -68,8 +68,8 @@ export const themes = {
     },
     danger: {
       primary: palette.danger.base,
-      secondary: palette.danger.darker,
-      tertiary: palette.danger.darkest,
+      secondary: palette.danger.lighter,
+      tertiary: palette.danger.lightest,
     },
     warning: {
       primary: palette.warning.base,
@@ -110,8 +110,8 @@ export const themes = {
     },
     danger: {
       primary: palette.danger.base,
-      secondary: palette.danger.lighter,
-      tertiary: palette.danger.lightest,
+      secondary: palette.danger.darker,
+      tertiary: palette.danger.darkest,
     },
     warning: {
       primary: palette.warning.base,

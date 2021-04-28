@@ -1,8 +1,15 @@
 import { fonts } from 'src/styles';
+import { palette } from 'src/styles/colors';
 import styled from 'styled-components';
 
 export const Container = styled.button`
+  background-color: ${(props) => props.theme.success.primary};
+  color: ${palette.white.base};
+
+  font-weight: ${fonts.weight.normal};
+
   outline: none;
+  border: none;
 
   padding: 0.65rem 1rem;
   border-radius: 0.3rem;
@@ -10,4 +17,6 @@ export const Container = styled.button`
   font-size: 14px;
 
   cursor: pointer;
+
+  width: 100%;
 `;
