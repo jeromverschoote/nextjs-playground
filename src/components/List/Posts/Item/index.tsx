@@ -7,14 +7,14 @@ interface Props {
 }
 
 const Item = (props: Props): JSX.Element => {
-  const { title, text, author, date } = props.item;
+  const { title, text, userId, date } = props.item;
 
   return (
     <Container>
       <Head>
         <Title>{title}</Title>
         <Subtitle>
-          {author.name} {date && `- ${date}`}
+          {userId} {date && `- ${date}`}
         </Subtitle>
       </Head>
       <Body>

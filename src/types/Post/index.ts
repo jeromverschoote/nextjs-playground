@@ -3,8 +3,5 @@ export type PostType = {
   title: string;
   text: string;
   date: string;
-  author: {
-    id: number;
-    name: string;
-  };
+  userId: number;
 };

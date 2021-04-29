@@ -1,4 +1,4 @@
-import { PostType } from 'src/types/Post';
+import { PostType as Post } from 'src/types/Post';
 
 const DATA = [
   {
@@ -7,10 +7,7 @@ const DATA = [
     text:
       'Today I build my first Next App. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    author: {
-      id: 1,
-      name: 'Jerom Verschoote',
-    },
+    userId: 1,
   },
   {
     id: 2,
@@ -18,10 +15,7 @@ const DATA = [
     text:
       'Today I picked my first flower. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    author: {
-      id: 2,
-      name: 'Lie Verschoote',
-    },
+    userId: 2,
   },
   {
     id: 3,
@@ -29,10 +23,7 @@ const DATA = [
     text:
       'Today I caught my first Pokemon. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    author: {
-      id: 3,
-      name: 'Thomas Reynen',
-    },
+    userId: 3,
   },
   {
     id: 4,
@@ -40,10 +31,7 @@ const DATA = [
     text:
       'Today I repaired my first smartphone. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    author: {
-      id: 4,
-      name: 'Wannes De Meyer',
-    },
+    userId: 4,
   },
   {
     id: 5,
@@ -51,15 +39,76 @@ const DATA = [
     text:
       'Today I bought my first Bitcoin. Halvah jujubes brownie cupcake sugar plum cookie caramels sweet roll donut. Gummi bears tiramisu wafer marzipan powder carrot cake wafer bear claw lemon drops. Brownie tart jelly danish dragée pudding sesame snaps carrot cake. Carrot cake caramels tart.',
     date: '',
-    author: {
-      id: 5,
-      name: 'Simon Van Haeken',
-    },
+    userId: 5,
   },
 ];
 
+interface Options {
+  id?: number;
+  userId?: number;
+}
+
+type Result = undefined | Post | Post[];
+
 export default {
-  findAll: (): PostType[] => DATA,
-  find: (id: number): PostType | undefined =>
-    DATA.find((item) => item.id === id),
+  find: (options?: Options): Result => {
+    let result: Result;
+
+    // find by id
+    if (options?.id && !options?.userId) {
+      result = DATA.find((post) => post.id === options.id);
+    }
+
+    // find by userId
+    if (!options?.id && options?.userId) {
+      result = DATA.find((post) => post.userId === options.userId);
+    }
+
+    // find all
+    if (!options) {
+      result = DATA;
+    }
+
+    return result;
+  },
+  save: (newPost: Post, options?: Options): Result => {
+    let result: Result;
+
+    // update existing post
+    if (options?.id) {
+      DATA.forEach((post: Post) => {
+        if (post.id === options.id) {
+          post.id = newPost.id;
+          post.title = newPost.title;
+          post.text = newPost.text;
+          post.userId = newPost.userId;
+        }
+      });
+      result = DATA;
+    }
+
+    // add new post
+    if (!options) {
+      DATA.push(newPost);
+      result = DATA;
+    }
+
+    return result;
+  },
+  remove: (options: Options): Result => {
+    const { id } = options;
+    let result: Result;
+
+    // remove existing post
+    if (id) {
+      DATA.forEach((post, index) => {
+        if (post.id === id) {
+          DATA.splice(index, 1);
+        }
+      });
+      result = DATA;
+    }
+
+    return result;
+  },
 };
