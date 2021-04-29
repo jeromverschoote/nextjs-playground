@@ -16,9 +16,11 @@ import { palette } from 'src/styles/colors';
 import { useRouter } from 'next/router';
 
 const USER = {
+  id: 1,
   firstName: 'Jerom',
   lastName: 'Verschoote',
   emailAddress: 'jeromverschoote@gmail.com',
+  imageUrl: '/assets/images/avatar.png',
 };
 interface Props {
   children: any;

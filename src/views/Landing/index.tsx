@@ -1,19 +1,18 @@
 import React from 'react';
-
-import { Container, Content, Head, Body } from './styles';
-
-import Layout from 'src/components/Layout';
 import { useTranslation } from 'react-i18next';
 
+import List from 'src/components/List';
+import Layout from 'src/components/Layout';
 import { usePosts } from 'src/hooks/usePosts';
 import { useUsers } from 'src/hooks/useUsers';
-import List from 'src/components/List';
+
+import { Container, Content, Head, Body } from './styles';
 
 const Landing = (): JSX.Element => {
   const { t } = useTranslation();
 
-  const posts = usePosts();
-  const users = useUsers();
+  const { posts } = usePosts();
+  const { users } = useUsers();
 
   return (
     <Layout>

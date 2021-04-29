@@ -101,11 +101,7 @@ export default {
 
     // remove existing post
     if (id) {
-      DATA.forEach((post, index) => {
-        if (post.id === id) {
-          DATA.splice(index, 1);
-        }
-      });
+      DATA.filter((post) => post.id === id);
       result = DATA;
     }
 

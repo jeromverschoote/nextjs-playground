@@ -11,7 +11,7 @@ interface Props {
   posts: QueryType;
 }
 
-const UsersList = (props: Props): JSX.Element => {
+const PostsList = (props: Props): JSX.Element => {
   const { title, posts } = props;
   const { isLoading, isError, data } = posts;
 
@@ -29,21 +29,21 @@ const UsersList = (props: Props): JSX.Element => {
     );
   }
 
-  if (isError) {
-    return (
-      <Container.Error>
-        <Title>{title}</Title>
-        <Subtitle>{t('components.list.isError.subtitle')}</Subtitle>
-      </Container.Error>
-    );
-  }
-
   if (isEmpty) {
     return (
       <Container.Empty>
         <Title>{title}</Title>
         <Subtitle>{t('components.list.isEmpty.subtitle')}</Subtitle>
       </Container.Empty>
+    );
+  }
+
+  if (isError || !data) {
+    return (
+      <Container.Error>
+        <Title>{title}</Title>
+        <Subtitle>{t('components.list.isError.subtitle')}</Subtitle>
+      </Container.Error>
     );
   }
 
@@ -59,4 +59,4 @@ const UsersList = (props: Props): JSX.Element => {
   );
 };
 
-export default UsersList;
+export default PostsList;
