@@ -9,7 +9,7 @@ export const usePosts = (): any => {
   });
 
   const handleReadPost = async (id: number) => {
-    const result = await fetch(`/api/post/${id}`, {
+    const result = await fetch(`/api/posts/${id}`, {
       method: MethodEnum.Get,
     });
 
@@ -17,7 +17,7 @@ export const usePosts = (): any => {
   };
 
   const handleCreatePost = async (post: PostType) => {
-    const result = await fetch(`/api/post`, {
+    const result = await fetch(`/api/posts`, {
       method: MethodEnum.Post,
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const usePosts = (): any => {
   };
 
   const handleUpdatePost = async (id: number, post: PostType) => {
-    const result = await fetch(`/api/post/${id}`, {
+    const result = await fetch(`/api/posts/${id}`, {
       method: MethodEnum.Patch,
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const usePosts = (): any => {
   };
 
   const handleDeletePost = async (id: number) => {
-    const result = await fetch(`/api/post/${id}`, {
+    const result = await fetch(`/api/posts/${id}`, {
       method: MethodEnum.Delete,
     });
 

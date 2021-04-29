@@ -9,7 +9,7 @@ export const useUsers = (): any => {
   });
 
   const handleReadUser = async (id: number) => {
-    const result = await fetch(`/api/user/${id}`, {
+    const result = await fetch(`/api/users/${id}`, {
       method: MethodEnum.Get,
     });
 
@@ -17,7 +17,7 @@ export const useUsers = (): any => {
   };
 
   const handleCreateUser = async (post: PostType) => {
-    const result = await fetch(`/api/user`, {
+    const result = await fetch(`/api/users`, {
       method: MethodEnum.Post,
       headers: {
         'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const useUsers = (): any => {
   };
 
   const handleUpdateUser = async (id: number, post: PostType) => {
-    const result = await fetch(`/api/user/${id}`, {
+    const result = await fetch(`/api/users/${id}`, {
       method: MethodEnum.Patch,
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const useUsers = (): any => {
   };
 
   const handleDeleteUser = async (id: number) => {
-    const result = await fetch(`/api/user/${id}`, {
+    const result = await fetch(`/api/users/${id}`, {
       method: MethodEnum.Delete,
     });
 
