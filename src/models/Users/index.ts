@@ -1,4 +1,10 @@
-import { UserType } from 'src/types/User';
+import { UserType as User } from 'src/types/User';
+
+interface Options {
+  id?: number;
+}
+
+type Result = undefined | User | User[];
 
 const DATA = [
   {
@@ -39,7 +45,60 @@ const DATA = [
 ];
 
 export default {
-  findAll: (): UserType[] => DATA,
-  find: (id: number): UserType | undefined =>
-    DATA.find((item) => item.id === id),
+  find: (options?: Options): Result => {
+    let result: Result;
+
+    // find by id
+    if (options?.id) {
+      result = DATA.find((post) => post.id === options.id);
+    }
+
+    // find all
+    if (!options) {
+      result = DATA;
+    }
+
+    return result;
+  },
+  save: (newUser: User, options?: Options): Result => {
+    let result: Result;
+
+    // update existing post
+    if (options?.id) {
+      DATA.forEach((user: User) => {
+        if (user.id === options.id) {
+          user.id = newUser.id;
+          user.firstName = newUser.firstName;
+          user.lastName = newUser.lastName;
+          user.emailAddress = newUser.emailAddress;
+          user.imageUrl = newUser.imageUrl;
+        }
+      });
+      result = DATA;
+    }
+
+    // add new post
+    if (!options) {
+      DATA.push(newUser);
+      result = DATA;
+    }
+
+    return result;
+  },
+  remove: (options: Options): Result => {
+    const { id } = options;
+    let result: Result;
+
+    // remove existing post
+    if (id) {
+      DATA.forEach((user, index) => {
+        if (user.id === id) {
+          DATA.splice(index, 1);
+        }
+      });
+      result = DATA;
+    }
+
+    return result;
+  },
 };

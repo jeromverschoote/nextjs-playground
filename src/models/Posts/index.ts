@@ -1,5 +1,12 @@
 import { PostType as Post } from 'src/types/Post';
 
+interface Options {
+  id?: number;
+  userId?: number;
+}
+
+type Result = undefined | Post | Post[];
+
 const DATA = [
   {
     id: 1,
@@ -42,13 +49,6 @@ const DATA = [
     userId: 5,
   },
 ];
-
-interface Options {
-  id?: number;
-  userId?: number;
-}
-
-type Result = undefined | Post | Post[];
 
 export default {
   find: (options?: Options): Result => {
