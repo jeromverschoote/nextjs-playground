@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import List from 'src/components/List';
 import Layout from 'src/components/Layout';
-import { usePosts } from 'src/hooks/usePosts';
 import { useUsers } from 'src/hooks/useUsers';
+import { usePosts } from 'src/hooks/usePosts';
 
 import { Container, Content, Head, Body } from './styles';
 

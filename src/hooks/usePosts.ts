@@ -1,56 +1,65 @@
 import { useQuery } from 'react-query';
+
 import MethodEnum from 'src/enums/Method';
 import { PostType } from 'src/types';
 
-export const usePosts = (): any => {
-  const posts = useQuery('posts', async () => {
-    const result = await fetch(`/api/posts`);
-    return result.json();
+export const handleReadPosts = async (): Promise<PostType[]> => {
+  const result = await fetch(`/api/posts`, {
+    method: MethodEnum.Get,
   });
 
-  const handleReadPost = async (id: number) => {
-    const result = await fetch(`/api/posts/${id}`, {
-      method: MethodEnum.Get,
-    });
+  return result.json();
+};
 
-    return result.json();
-  };
+export const handleReadPost = async (id: number): Promise<PostType> => {
+  const result = await fetch(`/api/posts/${id}`, {
+    method: MethodEnum.Get,
+  });
 
-  const handleCreatePost = async (post: PostType) => {
-    const result = await fetch(`/api/posts`, {
-      method: MethodEnum.Post,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post }),
-    });
+  return result.json();
+};
 
-    return result.json();
-  };
+export const handleCreatePost = async (post: PostType): Promise<PostType[]> => {
+  const result = await fetch(`/api/posts`, {
+    method: MethodEnum.Post,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ post }),
+  });
 
-  const handleUpdatePost = async (id: number, post: PostType) => {
-    const result = await fetch(`/api/posts/${id}`, {
-      method: MethodEnum.Patch,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post }),
-    });
+  return result.json();
+};
 
-    return result.json();
-  };
+export const handleUpdatePost = async (
+  id: number,
+  post: PostType,
+): Promise<PostType[]> => {
+  const result = await fetch(`/api/posts/${id}`, {
+    method: MethodEnum.Patch,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ post }),
+  });
 
-  const handleDeletePost = async (id: number) => {
-    const result = await fetch(`/api/posts/${id}`, {
-      method: MethodEnum.Delete,
-    });
+  return result.json();
+};
 
-    return result.json();
-  };
+export const handleDeletePost = async (id: number): Promise<PostType[]> => {
+  const result = await fetch(`/api/posts/${id}`, {
+    method: MethodEnum.Delete,
+  });
 
+  return result.json();
+};
+
+export const usePosts = (): any => {
   return {
-    posts,
-    handleReadPost,
+    posts: useQuery(['posts'], handleReadPosts),
+    handleReadPost: (id: number) =>
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      useQuery(['posts', { id }], () => handleReadPost(id)),
     handleCreatePost,
     handleUpdatePost,
     handleDeletePost,
